@@ -1,0 +1,42 @@
+import discord 
+from discord.ext import commands
+
+client = commands.Bot(command_prefix = '-')
+
+@client.event 
+async def on_ready ():
+	print('Listo.')
+
+	
+#COMANDO PING		
+	
+@client.command()
+async def ping(ctx,):
+	await ctx.send(f'Pong! :ping_pong: {round(client.latency * 1000)}ms.')
+#FINAL PING
+
+#COMANDO BAN
+
+@commands.has_permissions(ban_members=True)
+@client.command()
+async def ban(ctx, member : discord.Member):
+    await member.ban()
+    await ctx.send("¡El usuario {} ha baneado al usuario {}!".format(ctx.author.name, member.name))
+#FIN BAN
+
+#COMANDO KICK
+
+@commands.has_permissions(kick_members=True)
+@client.command()
+async def kick(ctx, member : discord.Member):
+    await member.kick()
+    await ctx.send("¡El usuario {} ha kickeado al usuario {}!".format(ctx.author.name, member.name))	
+#FIN KICK
+
+
+
+
+
+
+
+client.run ('NjUwMjE0OTk1NjEwODI4ODI4.XeIGCA.x08OanKQasnOghYgsdPglAb3t0U')
