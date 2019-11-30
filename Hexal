@@ -39,4 +39,5 @@ async def kick(ctx, member : discord.Member):
 
 
 
-client.run ('NjUwMjE0OTk1NjEwODI4ODI4.XeIGCA.x08OanKQasnOghYgsdPglAb3t0U')
+client.run ('
+NjUwMjE0OTk1NjEwODI4ODI4.XeKEhw.ep1rB9EqEVQLNRH6PMhm0PksHeo')
